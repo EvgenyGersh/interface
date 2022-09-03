@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Interfaсe</title>
+	<title>Interface</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
 	<div class="tabs__slider-wrap">
 		<div class="tabs__slider">
  			<!-- <div class="swiper-wrapper"> -->
- 				<div class="tab__slide1 tab-item  active" id="tab_3">
+ 				<div class="tab__slide1 tab-item  " id="tab_3">
 		    	<div class="tab1__cont slide3__cont">
 		    		<div class="tab__img-wrap slide3__img-wrap" >
 		    			<img class="img-sml" src="images/dist/tab1-img.png" alt="">
@@ -43,11 +43,11 @@
 		    	</div>
 		    	<div class="top__navig ">
 						<div class="custom__pagin tab-nav">
-							<span class="cust-sp active"></span>
-							<span class="cust-sp "></span>
-							<span class="cust-sp "></span>
+							<span class="cust-sp active tab-lnk" data-tab="#tab_3"></span>
+							<span class="cust-sp tab-lnk" data-tab="#tab_1"></span>
+							<span class="cust-sp tab-lnk" data-tab="#tab_2"></span>
 						</div>
-						<a href="" class="cust__lnk tab-lnk tgl-main">
+						<a href="" class="cust__lnk  tgl-main">
 							<img src="images/dist/arr-left.svg" alt="">
 						</a>
 					</div>
@@ -67,9 +67,9 @@
 		    	</div>
 		    	<div class="top__navig ">
 						<div class="custom__pagin tab-nav">
-							<span class="cust-sp active"></span>
-							<span class="cust-sp active"></span>
-							<span class="cust-sp "></span>
+							<span class="cust-sp active tab-lnk" data-tab="#tab_3"></span>
+							<span class="cust-sp active tab-lnk>" data-tab="#tab_1"></span>
+							<span class="cust-sp  tab-lnk" data-tab="#tab_2"></span>
 						</div>
 						<a href="#" class="cust__lnk tab-lnk" data-tab="#tab_3">
 							<img src="images/dist/arr-left.svg" alt="">
@@ -85,9 +85,9 @@
 					</div>
 					<div class="top__navig ">
 						<div class="custom__pagin tab-nav">
-							<span class="cust-sp active"></span>
-							<span class="cust-sp active"></span>
-							<span class="cust-sp active"></span>
+							<span class="cust-sp active tab-lnk"  data-tab="#tab_3"></span>
+							<span class="cust-sp active tab-lnk"data-tab="#tab_1"></span>
+							<span class="cust-sp active tab-lnk"  data-tab="#tab_2"></span>
 						</div>
 						<a href="#" class="cust__lnk tab-lnk back-lnk" data-tab="#tab_3">
 							<img src="images/dist/arr-left.svg" alt="">
@@ -101,11 +101,11 @@
 </section>
 <main class="main-cont">
 	<div class="interface__slider-wrap">
-		<div class="interface__slider"> 
+		<div class="interface__slider" id="main-sld"> 
   
 	  <div class="swiper-wrapper">
 	    
-	    <div class="interface__slide1 swiper-slide" style="background-image: url(images/dist/slide-bg1.png);">
+	    <div class="interface__slide1 swiper-slide" style="background-image: url(images/dist/slide-bg1.png);" >
 	    	<div class="slide1__cont">
 	    		<h2>Episode 11: Ut enim ad minim</h2>
 	    		<p class="light-p  int1-p">
@@ -208,12 +208,12 @@
 		</div> -->
 		<div class="top__navig">
 			<div class="custom__pagin swiper-pagination"></div>
-			<div class="logo__wrap">
+			<a href="#main-sld" class="logo__wrap">
 				<div class="logo__img-wrap">
 					<img src="images/dist/profile.png" alt="">
 				</div>
 				<span class="logo-sp">Marin Njavro</span>
-			</div>
+			</a>
 		</div>
 	</div>
 </main> 

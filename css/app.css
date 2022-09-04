@@ -940,6 +940,7 @@ video {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
   margin-right: 8px;
+	cursor: pointer;
 }
 .cust-sp.active {
   background: #06E9EE;

@@ -1,30 +1,36 @@
-// // Import vendor jQuery plugin example
-// import '~/app/libs/mmenu/dist/mmenu.js'
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
 	const mainSwiper = new Swiper('.interface__slider',{
 		
 		effect: "cards",
-   //  cardsEffect: {
-   //   rotate: false,
-   //   slideShadows: false,
-  	// },   
-		// loop: false,
     grabCursor: true,
     pagination: {
-          // el: ".custom__pagin",
           el: ".swiper-pagination",
           clickable: true,
           },
 	})
 
+  var slidelength = document.querySelectorAll('.swiper-slide').length;
+  var custSpan = document.querySelectorAll('.cust-sp');
+  var sliderWidth = document.querySelector('.interface__slider').clientWidth;
+  var custSpanWidth = ((sliderWidth / slidelength) - 12);
+  var cusBullet = document.querySelectorAll('.swiper-pagination-bullet');
+
+      cusBullet.forEach(function(item){
+        item.style.width = custSpanWidth + 'px';
+      })
   
 
-  // const tabsSwiper = new Swiper('.tabs__slider',{
+
+
+  document.querySelector('.logo-link').addEventListener('click',function(e){
+    e.preventDefault();
+    // console.log('click');
     
-    
-  // })
+    mainSwiper.slideTo( 0, 500, false );
+  })
 
   document.querySelector('.tabs-link').addEventListener('click',function(e){
     e.preventDefault();
@@ -44,20 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
   })
 
-  // document.querySelector('.tab-lnk').addEventListener('click', function(e){
-  //     e.preventDefault();
-  //     const id = e.target.getAttribute('href').replace('#', '');
-  //       console.log(id);
-      // document.querySelectorAll('.tab-item').forEach((child) => child.classList.remove('active'));
-      // document.getElementById(id).classList.add('active');
-    // })
-
   
-  // document.querySelectorAll('.tab-link').click();
   const tabsBtn = document.querySelectorAll('.tab-lnk');
   const tabsItems = document.querySelectorAll('.tab-item');
-    // console.log(tabsBtn);
-
+    
     tabsBtn.forEach(function(item){
       item.addEventListener('click', function(e){
         e.preventDefault();
@@ -67,10 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tabsItems.forEach(function(item){
           item.classList.remove('active');
-        })
+        });
         currentTab.classList.add('active');
-        // console.log(tabId);
+        
       })
     })
-    // document.querySelector('.tab-lnk:nth-child-3').click();
+    
 })
